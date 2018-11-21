@@ -16,6 +16,9 @@
 (defvar ivy-enable-advanced-buffer-information nil
   "If non-nil, enable `ivy-rich' which adds information on buffers.")
 
+(defvar ivy-enable-weighted-history-selection nil
+  "If non-nil, enable `ivy-prescient' which adds previous selections to the top of suggestions for functions where it makes sense to do so.")
+
 
 ;; Private Variables
 

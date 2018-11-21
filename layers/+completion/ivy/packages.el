@@ -22,9 +22,11 @@
         ivy-hydra
         (ivy-rich :toggle ivy-enable-advanced-buffer-information)
         (ivy-spacemacs-help :location local)
+        (ivy-prescient :toggle ivy-enable-weighted-history-selection)
         ivy-xref
         org
         persp-mode
+        prescient
         projectile
         recentf
         smex
@@ -226,6 +228,15 @@
             ivy-rich-switch-buffer-align-virtual-buffer t)
       (ivy-set-display-transformer 'ivy-switch-buffer
                                    'ivy-rich-switch-buffer-transformer))))
+
+(defun ivy/init-ivy-prescient ()
+  (use-package ivy-rich
+    :defer t
+    :init (setq ivy-prescient-retain-classic-highlighting t)
+    :config (ivy-prescient-mode)))
+
+(defun ivy/init-prescient ()
+  (use-package prescient))
 
 (defun ivy/init-ivy-spacemacs-help ()
   (use-package ivy-spacemacs-help

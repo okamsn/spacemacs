@@ -7,6 +7,7 @@
 - [[#configuration][Configuration]]
   - [[#general][General]]
   - [[#advanced-buffer-information][Advanced buffer information]]
+  - [[#weighted-history-selection][Weighted history selection]]
 - [[#key-bindings][Key Bindings]]
   - [[#transient-state][Transient state]]
 
@@ -58,6 +59,18 @@ is disabled by default.
 #+BEGIN_SRC emacs-lisp
   (setq-default dotspacemacs-configuration-layers '(
     (ivy :variables ivy-enable-advanced-buffer-information t)))
+#+END_SRC
+
+** Weighted history selection
+To have past selections appear as the top of suggestion lists set the layer
+variable =ivy-enable-weighted-history-selection= to =t= which will enable
+=ivy-prescient=.
+
+This feature is disabled by default.
+
+#+BEGIN_SRC emacs-lisp
+  (setq-default dotspacemacs-configuration-layers '(
+    (ivy :variables ivy-enable-weighted-history-selection t)))
 #+END_SRC
 
 * Key Bindings
